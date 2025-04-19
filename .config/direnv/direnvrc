@@ -1,0 +1,10 @@
+use_node() {
+  local node_version
+  if [[ -f .nvmrc ]]; then
+    node_version=$(<.nvmrc)
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+    nvm use "$node_version" > /dev/null
+  fi
+}
+alias use=use_node
