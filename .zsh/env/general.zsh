@@ -1,6 +1,6 @@
-# Add WebStorm (wstorm)
-export WEBSTORM="/Applications/WebStorm.app/Contents/MacOS"
-export PATH="$WEBSTORM:$PATH"
+# Añadir WebStorm al PATH de forma directa
+export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
+echo "📂 PATH con WebStorm"
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/krbaio3/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;

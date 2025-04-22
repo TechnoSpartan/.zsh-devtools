@@ -1,0 +1,153 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = true
+
+# ➜ Prompt Symbol
+[character]
+success_symbol = '[➜](bold green)'
+
+#  Sistema operativo (primero de todo)
+[os]
+format = '[$symbol](bold white) '
+
+[os.symbols]
+Macos = " "
+Linux = " "
+Windows = "󰍲 "
+Ubuntu = " "
+Unknown = " "
+
+# 📁 Current directory
+[directory]
+style = "bold cyan"
+read_only = "󰌾"
+format = "[$path]($style)[$read_only]($read_only_style)"
+
+# 🌿 Git branch
+[git_branch]
+symbol = "🌿 "
+format = 'on [$symbol$branch]($style)'
+style = "bold yellow"
+
+# 🔖 Git commit info
+[git_commit]
+tag_symbol = "🔖 "
+only_detached = false
+
+# 🔄 Git status
+[git_status]
+format = '[\[$all_status$ahead_behind\]]($style)'
+style = "bold red"
+
+# 🟢 Node.js
+[nodejs]
+symbol = " "
+format = '[$symbol($version)]($style)'
+detect_extensions = ["js", "ts", "mjs", "cjs"]
+detect_files = ["package.json", "pnpm-lock.yaml"]
+
+# 🍞 Bun
+[bun]
+symbol = "🍞"
+format = '[$symbol($version)]($style)'
+detect_files = ["bun.lockb"]
+
+# 🐳 Docker
+[docker_context]
+symbol = "🐳 "
+format = '[$symbol$context]($style)'
+
+# ⎈ Kubernetes
+[kubernetes]
+symbol = "⎈ "
+format = '[$symbol$context( \($namespace\))]($style)'
+
+# 📦 NPM package
+[package]
+symbol = "󰏗 "
+format = '[$symbol$version]($style)'
+
+# 👤 Usuario
+[username]
+format = '[$user]($style)'
+
+# 🌐 Host
+[hostname]
+ssh_symbol = " "
+
+# 🧠 Memoria
+[memory_usage]
+symbol = "󰍛 "
+format = '[$symbol[$ram( | $swap)]]($style)'
+
+# 🕓 Tiempo
+[time]
+format = '[$time]($style)'
+
+# ☁️ AWS
+[aws]
+symbol = " "
+format = '[$symbol($profile)(\($region\))(\[$duration\])]($style)'
+
+# 🔤 Lenguajes comunes
+[python]
+symbol = " "
+format = '[${symbol}(${version})(\($virtualenv\))]($style)'
+
+[rust]
+symbol = "🦀 "
+format = '[$symbol($version)]($style)'
+
+[golang]
+symbol = " "
+format = '[$symbol($version)]($style)'
+
+[php]
+symbol = " "
+format = '[$symbol($version)]($style)'
+
+[java]
+symbol = "☕ "
+format = '[$symbol($version)]($style)'
+
+[swift]
+symbol = " "
+format = '[$symbol($version)]($style)'
+
+# Otros lenguajes y herramientas
+[c]
+symbol = " "
+
+[cmake]
+symbol = " "
+format = '[$symbol($version)]($style)'
+
+[conda]
+symbol = " "
+format = '[$symbol$environment]($style)'
+
+[dart]
+symbol = " "
+format = '[$symbol($version)]($style)'
+
+[elm]
+symbol = " "
+format = '[$symbol($version)]($style)'
+
+[kotlin]
+symbol = " "
+format = '[$symbol($version)]($style)'
+
+[deno]
+format = '[$symbol($version)]($style)'
+
+[dotnet]
+format = '[$symbol($version)(🎯 $tfm)]($style)'
+
+[gcloud]
+format = '[$symbol$account(@$domain)(\($region\))]($style)'
+
+[sudo]
+format = '[as $symbol]($style)'
+
+[terraform]
+format = '[$symbol$workspace]($style)'

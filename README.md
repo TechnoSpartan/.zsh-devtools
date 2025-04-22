@@ -28,6 +28,18 @@ Incluye configuración segmentada por contexto para trabajar de forma rápida y 
 
 ---
 
+## ⚡ Características destacadas
+
+- ✅ Zsh modular con estructura por entornos (`node`, `flutter`, `devops`, etc.)
+- ✅ Plugins esenciales: autosuggestions, syntax highlighting, completions
+- ✅ Carga inteligente de entornos según tipo de proyecto
+- ✅ Prompt personalizado con Starship
+- ✅ Instalador automático (`install.sh`)
+- ✅ Comprobador de herramientas (`check-devtools.sh`)
+
+---
+
+
 ## 📜 Requisitos
 
 - Ejecutar el script `check-devtools`:
@@ -38,22 +50,35 @@ chmod +x check-devtools.sh
 
 Te indicará los requisitos necesarios para cada entorno, y los faltantes.
 
-## 📦 Estructura del proyecto
+## 🧰 Estructura del proyecto
 
 ```bash
 .zshrc                          # Archivo principal, minimalista y modular
+install.sh
+codespartan-doctor.sh           # Doctor para problemas rápidos
+check-devtools.sh
+.zsh_plugins.sh
+.config/
+├── direnv/
+└── direnvrc                # Soporte para `.nvmrc` vía direnv
 .zsh/
 ├── devtools.zsh                # Cargador de entornos por comando
-└── env/                        # Módulos de entorno separados
-    ├── android.zsh
-    ├── devops.zsh
-    ├── flutter.zsh
-    ├── general.zsh
-    ├── ios.zsh
-    └── node.zsh
-.config/
-└── direnv/
-    └── direnvrc                # Soporte para `.nvmrc` vía direnv
+│   ├── base/                   # Cargador Base
+│   │    ├── aliases.zsh
+│   │    ├── exports.zsh
+│   │    └── plugins.zsh
+│   ├── env/                        # Módulos de entorno separados
+│   │    ├── android.zsh
+│   │    ├── devops.zsh
+│   │    ├── flutter.zsh
+│   │    ├── general.zsh
+│   │    ├── ios.zsh
+│   │    └── node.zsh                  
+│   └── profiles/
+│         ├── cloud.zsh
+│         └── web.zsh
+└── assets/                        
+    └── logo.png
 ```
 
 ---
@@ -64,6 +89,7 @@ Dos opiones:
 
 1. Hazlo ejecutable y ejecútalo desde la raíz del repositorio clonado:
 ```bash
+git clone https://github.com/TechnoSpartan/zsh-devtools ~/.zsh-devtools
 chmod +x install.sh
 ./install.sh
 ```
@@ -113,13 +139,15 @@ Esto cargará automáticamente la versión de Node correspondiente al entrar en 
 
 ---
 
+## 🧩 ¿Contribuciones?
+
+Pull requests y sugerencias son bienvenidas. Haz tu fork, mejora tu entorno, y comparte.
+
+---
+
 ## 💬 Créditos
 
 - Creado por **CodeSpartan** — __Tecnología que impulsa__ ⚡
 - Con cariño, sudor, y scripts afilados.
 
----
-
-## 🧩 ¿Contribuciones?
-
-Pull requests y sugerencias son bienvenidas. Haz tu fork, mejora tu entorno, y comparte.
+MIT © CodeSpartan

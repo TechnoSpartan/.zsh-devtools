@@ -1,3 +1,4 @@
+# ☁️ Entorno DevOps
 export PATH="/usr/bin:/bin:/usr/local/bin:$PATH"  # Añade rutas esenciales
 
 ### 🔒 GPG
@@ -16,4 +17,6 @@ export PATH="$OPENSSL:$PATH"
 export GROOVY_HOME="/usr/local/opt/groovy/libexec"
 export PATH="$GROOVY_HOME:$PATH"
 
-echo "✅ Entorno DevOps cargado (Docker, K8s, Groovy)"
+source "$ROOT/profiles/cloud.zsh"
+
+echo "☁️ Entorno DevOps activado (Docker, kubectl, K8s, Groovy)"
